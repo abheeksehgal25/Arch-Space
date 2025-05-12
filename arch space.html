@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -16,6 +16,8 @@
   </script>
   <!-- End Google Tag Manager -->
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -26,8 +28,10 @@
     html, body {
       height: 100%;
       width: 100%;
-      font-family: Arial, sans-serif;
-      background-color: white;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      color: #333;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -36,39 +40,100 @@
     }
 
     header {
-      background-color: #333;
+      background: linear-gradient(90deg, #1a1a1a, #333);
       color: white;
-      padding: 1em;
+      padding: 2rem;
       text-align: center;
-      flex-shrink: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      animation: fadeInDown 1s ease-out;
     }
 
     .cta {
-      background-color: #f4f4f4;
-      padding: 2em;
+      background: white;
+      padding: 4rem 2rem;
       text-align: center;
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #555;
     }
 
     .cta a {
       display: inline-block;
-      background-color: #007BFF;
+      background: linear-gradient(90deg, #007BFF, #0056b3);
       color: white;
-      padding: 0.75em 1.5em;
+      padding: 0.85em 2em;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 1em;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 14px rgba(0, 123, 255, 0.3);
+    }
+
+    .cta a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
     }
 
     footer {
-      background-color: #eee;
+      background-color: #f1f1f1;
       text-align: center;
-      padding: 1em;
-      flex-shrink: 0;
+      padding: 1.5rem;
+      font-size: 0.95rem;
+      color: #666;
+      box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .cta h2 {
+        font-size: 1.5rem;
+      }
+
+      .cta p {
+        font-size: 1rem;
+      }
+
+      .cta a {
+        font-size: 0.95rem;
+        padding: 0.75em 1.5em;
+      }
     }
   </style>
 </head>
